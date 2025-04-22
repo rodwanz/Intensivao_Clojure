@@ -11,6 +11,7 @@
 
 (defn minhas-compras []
   ["Arroz" "Feijão" "Açúcar" "Macarrão" "Óleo" "Papel-higienico" "Pasta de dente"])
+
 (defn o-que-comprar [lista1]
   (println "O que tem pra comprar: " lista1))
 (let [eh-so-estes (take 3 (minhas-compras))]
@@ -23,6 +24,16 @@
 
 (defn todos-os-itens []
   ["Arroz" "Feijão" "Açúcar" "Macarrão" "Óleo" "Manteiga" "Frango" "Papel-higienico" "Pasta de dente"])
+
+(defn itens-que-faltam [itens]
+(let [[item1 _ _ _ _ _ _  item9 & depois-compro :as lista-toda] itens]
+  (println "O primeiro e o nono item da lista são: " item1 "e" item9)
+  (println "Estes preciso que compre depois " depois-compro)
+  (println "O que compro todo mês " lista-toda)))
+(println (itens-que-faltam (todos-os-itens)))
+
+
+
 
 
 
